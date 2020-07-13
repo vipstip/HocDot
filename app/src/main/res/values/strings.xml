@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Học Dốt</string>
+    <string name="title">VÌ TƯƠNG LAI PHẢI NHAI KIẾN THỨC</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <!--    Menu-->
+    <string name="menu_trang_chu">Trang chủ</string>
+    <string name="menu_tim_kiem">Tìm kiếm</string>
+    <string name="menu_doi_lop">Đổi lớp</string>
+    <string name="menu_bai_viet_da_luu">Sách đã tải xuống</string>
+    <string name="menu_hoc_truc_tuyen">Học trực tuyến tại Website</string>
+    <string name="menu_ung_dung_online">Học online</string>
+    <string name="menu_hoc_tieng_anh">Học tiếng anh</string>
+
+
+    <string name="html">
+        <![CDATA[
+        <div class="atitle" style="white-space: normal;margin:20px 0; ">
+                                <h3 style="font-size: 18px;font-weight: bold; color:#2888e1">Đồ thị</h3>
+                            </div>
+                            <div><img src="https://hocdot.com/libs/imgtools/do-thi-pt-1.svg" alt="Phương trình bậc một"></div>
+
+
+                            <div class="atitle" style="white-space: normal;margin:25px 0; ">
+                                <h3 style="font-size: 18px;font-weight: bold; color:#2888e1">Lý thuyết phương trình bậc nhất một ẩn và cách giải</h3>
+                            </div>
+                            <p style="text-align: justify;"><strong>1. Định nghĩa phương trình bậc nhất một ẩn</strong></p><p style="text-align: justify;">Phương trình có dạng \(ax+b=0\), với \(a\) và \(b\) là hai số đã cho và \(a\ne0\), được gọi là phương trình bậc nhất một ẩn.</p><p style="text-align: justify;"><strong>2. Hai quy tắc biến đổi phương trình</strong></p><p style="text-align: justify;"><strong>a) Quy tắc chuyển vế</strong></p><p style="text-align: justify;">Trong một phương trình ta có thể chuyển một hạng tử từ vế này sang vế kia và đổi dấu hạng tử đó.</p><p style="text-align: justify;"><strong>b) Quy tắc nhân với một số</strong></p><p style="text-align: justify;">Trong một phương trình, ta có thể nhân (hoặc chia) cả hai vế với cùng một số khác \(0\).</p><p style="text-align: justify;"><strong>3. Cách giải phương trình bậc nhất một ẩn</strong></p><p style="text-align: justify;"><strong>Bước 1:</strong> Chuyển vế \(ax = -b\)</p><p style="text-align: justify;"><strong>Bước 2:</strong> Chia hai vế cho \(a\) ta được: \(x =  \dfrac{-b}{a}\)</p><p style="text-align: justify;"><strong>Bước 3:</strong> Kết luận nghiệm: \(S =  \left \{ \dfrac{-b}{a} \right \}\)</p><p style="text-align: justify;"><strong>Tổng quát phương trình \(ax+b=0\) (với \(a\ne0\)) được giải như sau:</strong></p><p style="text-align: justify;">\(ax + b = 0 \Leftrightarrow  ax = -b  \Leftrightarrow  x = \dfrac{-b}{a}\)</p><p style="text-align: justify;">Vậy phương trình có một nghiệm duy nhất là \(x=   \dfrac{-b}{a} \)</p>
+                        </div>
+
+        ]]>
+    </string>
+
+    <!--    Lớp-->
+    <string name="lop_1">Lớp 1</string>
+    <string name="lop_2">Lớp 2</string>
+    <string name="lop_3">Lớp 3</string>
+    <string name="lop_4">Lớp 4</string>
+    <string name="lop_5">Lớp 5</string>
+    <string name="lop_6">Lớp 6</string>
+    <string name="lop_7">Lớp 7</string>
+    <string name="lop_8">Lớp 8</string>
+    <string name="lop_9">Lớp 9</string>
+    <string name="lop_10">Lớp 10</string>
+    <string name="lop_11">Lớp 11</string>
+    <string name="lop_12">Lớp 12</string>
+    <string name="lop_dai_cuong">Lớp Đại Cương</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="listMon">
+        <item>@string/MonToan</item>
+        <item>@string/MonLy</item>
+        <item>@string/MonHoa</item>
+        <item>@string/MonVan</item>
+        <item>@string/MonAnh</item>
+        <item>@string/MonSu</item>
+        <item>@string/MonDia</item>
+    </string-array>
+
+    <string name="MonToan">Toán</string>
+    <string name="MonLy">Lý</string>
+    <string name="MonHoa">Hóa</string>
+    <string name="MonVan">Văn</string>
+    <string name="MonAnh">Anh</string>
+    <string name="MonSu">Sử</string>
+    <string name="MonDia">Địa</string>
+
+    <string-array name="listLoaiSach">
+        <item>@string/sgk</item>
+        <item>@string/sachBaiTap</item>
+        <item>@string/sachGiai</item>
+    </string-array>
+
+    <string name="sgk">Sách giáo khoa</string>
+    <string name="sachBaiTap">Sách bài tập</string>
+    <string name="sachGiai">Sách giải</string>
+
+    <string name="chon_mon">Chọn môn:</string>
+    <string name="chon_sach">Chọn sách:</string>
+    <string name="chon_chuong">Chọn chương:</string>
+</resources>

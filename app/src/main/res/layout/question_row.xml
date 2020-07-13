@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="@string/title"
+        android:textStyle="bold"
+        android:textColor="#FF9422"
+        android:textSize="18sp"
+        android:id="@+id/titleQues"
+        tools:ignore="RtlHardcoded" />
+
+    <io.github.kexanie.library.MathView
+        android:id="@+id/txtContentQues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </io.github.kexanie.library.MathView>
+
+    <Button
+        android:id="@+id/btnAnswer"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Xem lời giải"
+        android:textColor="#22AFAB"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+</LinearLayout>

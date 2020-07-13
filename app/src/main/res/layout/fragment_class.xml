@@ -1,0 +1,91 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FragmentClass">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:text="Content"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:gravity="center"
+            android:baselineAligned="false">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="9"
+                android:weightSum="4"
+                android:background="@drawable/boder_class"
+                android:baselineAligned="false"
+                android:padding="5dp"
+                tools:ignore="UselessParent">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lineCol1"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    tools:ignore="NestedWeights" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lineCol2"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lineCol3"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lineCol4"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.billi.hocdot.Helpers.NonScrollGridView
+            android:id="@+id/grdViewMonHoc"
+            android:numColumns="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:horizontalSpacing="15dp"
+            >
+        </com.billi.hocdot.Helpers.NonScrollGridView>
+
+    </LinearLayout>
+
+
+
+</ScrollView>
