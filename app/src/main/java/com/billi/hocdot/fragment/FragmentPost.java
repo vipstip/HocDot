@@ -24,7 +24,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.billi.hocdot.Adapter.AdapterQuestions;
-import com.billi.hocdot.Contans.Questions;
+import com.billi.hocdot.Models.Questions;
 import com.billi.hocdot.Interface.ListenerPosts;
 import com.billi.hocdot.R;
 

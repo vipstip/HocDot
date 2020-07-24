@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
-import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,7 +36,6 @@ public class ActiviAnswer extends AppCompatActivity {
             mathViewAnswer.getSettings().setDisplayZoomControls(false);
             mathViewAnswer.getSettings().setJavaScriptEnabled(true);
             mathViewAnswer.setText("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes\">" + convertHTMLAnswer);
-            Log.e("HTML",convertHTMLAnswer.toString());
         }
     }
 }

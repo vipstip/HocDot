@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_gptBac2"
+    tools:context=".BangTinhTrucTuyen.giaiPT.GiaiPTBac2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giải Phương Trình Bậc 2"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/gptBac2NhapA"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:hint="a"
+            android:gravity= "center"
+            />
+
+        <io.github.kexanie.library.MathView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            app:text="\\(x^2\\) + "/>
+
+        <EditText
+            android:id="@+id/gptBac2NhapB"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="b"
+            android:importantForAutofill="no" />
+
+        <io.github.kexanie.library.MathView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            app:text="\\(x\\) + "/>
+
+        <EditText
+            android:id="@+id/gptBac2NhapC"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="c"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text=" = 0"/>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnGiai"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Giải"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Lời giải:"/>
+
+        <io.github.kexanie.library.MathView
+            android:id="@+id/ket_qua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

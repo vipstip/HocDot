@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.billi.hocdot.Contans.SachVaCombo;
+import com.billi.hocdot.Models.SachVaCombo;
 import com.billi.hocdot.Helpers.FragmentNavigationManage;
 import com.billi.hocdot.Interface.NavigationManage;
 import com.billi.hocdot.MainActivity;

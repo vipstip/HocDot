@@ -128,7 +128,6 @@ public class FragmentCombo extends Fragment {
                 final Spinner spinnerBooks = (Spinner) view.findViewById(R.id.spinnerBooks);
                 final Spinner spinnerTerms = (Spinner) view.findViewById(R.id.spinnerTerms);
                 book = sharedPreferences.getString("nameBook","");
-
                 final ArrayAdapter<String> adapter = new ArrayAdapter<String>(view.getContext(),
                         android.R.layout.simple_spinner_item,lstBooks);
 

@@ -1,6 +1,7 @@
 package com.billi.hocdot.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.billi.hocdot.Contans.MonHoc;
+import com.bil.bilmobileads.ADInterstitial;
+import com.bil.bilmobileads.PBMobileAds;
+import com.bil.bilmobileads.interfaces.AdDelegate;
+import com.billi.hocdot.Models.MonHoc;
 import com.billi.hocdot.Helpers.FragmentNavigationManage;
 import com.billi.hocdot.Interface.NavigationManage;
 import com.billi.hocdot.MainActivity;
@@ -29,8 +33,8 @@ public class AdapterMonHoc extends BaseAdapter {
         this.monHoc = monHoc;
         this.lop = lop;
         this.layout = layout;
-
         navigationManage = FragmentNavigationManage.getInstance(mainActivity);
+
     }
 
     @Override

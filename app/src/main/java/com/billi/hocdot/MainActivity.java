@@ -4,12 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +21,6 @@ import android.widget.ExpandableListView;
 import android.widget.FrameLayout;
 
 import com.bil.bilmobileads.ADBanner;
-import com.bil.bilmobileads.ADInterstitial;
 import com.bil.bilmobileads.PBMobileAds;
 import com.bil.bilmobileads.entity.BannerSize;
 import com.bil.bilmobileads.interfaces.AdDelegate;
@@ -44,12 +46,36 @@ public class MainActivity extends AppCompatActivity {
     private List<String> lstTitle;
     private Map<String,List<String>> lstChild;
     private NavigationManage navigationManage;
-
+    static final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 1;
+    static final int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
     ADBanner adBanner;
     FrameLayout bannerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION) && ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION) ) {
+
+            } else {
+
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                        MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION);
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+
+            }
+        }
         setContentView(R.layout.activity_main);
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
@@ -74,14 +100,14 @@ public class MainActivity extends AppCompatActivity {
 
         this.bannerView = findViewById(R.id.bannerView);
         if (this.adBanner == null){
-            this.adBanner = new ADBanner(bannerView,"1001");
-            adBanner.setAdSize(BannerSize.Banner300x250);
+            this.adBanner = new ADBanner(bannerView,"464b8063-1569-49dc-96d9-0db7656e2576");
+            adBanner.setAdSize(BannerSize.Banner320x50);
             adBanner.setAutoRefreshMillis(40000);
             this.adBanner.load();
             this.adBanner.setListener(new AdDelegate() {
                 @Override
                 public void onAdLoaded(String data) {
-                    Log.e("Check","ok");
+
                 }
                 @Override
                 public void onAdImpression(String data) {
@@ -109,6 +135,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     @Override
@@ -170,12 +202,20 @@ public class MainActivity extends AppCompatActivity {
                 if (items[1].equals(lstTitle.get(i))){
                     navigationManage.showFragment(selectedItem);
                 }
-                else{
-                    navigationManage.showFragment("Not support Items");
-                }
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
             }
+        });
+        expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView expandableListView, View view, int i, long l) {
+                if (items[2].equals(lstTitle.get(i))){
+                    navigationManage.showFragmentBangTinh();
+                    mDrawerLayout.closeDrawer(GravityCompat.START);
+                }
+                return false;
+            }
+
         });
     }
 

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:id="@+id/main_gpt1An"
+    tools:context=".BangTinhTrucTuyen.giaiPT.GiaiPTBac1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giải Phương Trình Bậc 1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/gpt1AnNhapA"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:hint="a"
+            android:gravity= "center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="x + "/>
+
+        <EditText
+            android:id="@+id/gpt1AnNhapB"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="b"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text=" = "/>
+
+        <EditText
+            android:id="@+id/gpt1AnNhapC"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="c"
+            android:importantForAutofill="no" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnGiai"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Giải"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Lời giải:"/>
+
+        <io.github.kexanie.library.MathView
+            android:id="@+id/ket_qua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

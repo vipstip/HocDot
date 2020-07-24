@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.billi.hocdot.ActiviAnswer;
-import com.billi.hocdot.Contans.Questions;
+import com.billi.hocdot.Models.Questions;
 import com.billi.hocdot.R;
 
 import io.github.kexanie.library.MathView;

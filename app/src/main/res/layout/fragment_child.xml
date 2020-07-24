@@ -22,16 +22,21 @@
         android:textAlignment="center"
         />
         <!-- TODO: Update blank fragment layout -->
-        <com.billi.hocdot.Helpers.NonScrollGridView
-            android:numColumns="3"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:verticalSpacing="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:id="@+id/grvSachVaCombo"
+            android:layout_height="wrap_content"
+            >
+            <com.billi.hocdot.Helpers.NonScrollGridView
+                android:numColumns="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:verticalSpacing="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/grvSachVaCombo"
+                />
+        </LinearLayout>
 
-            />
     </LinearLayout>
 </ScrollView>

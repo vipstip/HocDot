@@ -21,7 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.billi.hocdot.Adapter.GridViewAdapterSachVaCombo;
-import com.billi.hocdot.Contans.SachVaCombo;
+import com.billi.hocdot.Models.SachVaCombo;
 import com.billi.hocdot.Interface.ListenerComboAndBooks;
 import com.billi.hocdot.MainActivity;
 import com.billi.hocdot.R;

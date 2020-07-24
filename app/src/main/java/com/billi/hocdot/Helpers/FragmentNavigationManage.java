@@ -11,6 +11,7 @@ import com.android.volley.BuildConfig;
 import com.billi.hocdot.Interface.NavigationManage;
 import com.billi.hocdot.MainActivity;
 import com.billi.hocdot.R;
+import com.billi.hocdot.fragment.FragmentBangTinh;
 import com.billi.hocdot.fragment.FragmentBook;
 import com.billi.hocdot.fragment.FragmentChild;
 import com.billi.hocdot.fragment.FragmentClass;
@@ -46,6 +47,11 @@ public class FragmentNavigationManage implements NavigationManage {
     public void showFragment(String title) {
         showFragment(FragmentClass.newInstance(title),false);
         this.lop = title;
+    }
+
+    @Override
+    public void showFragmentBangTinh() {
+        showFragment(FragmentBangTinh.newInstance(),false);
     }
 
     @Override
@@ -111,6 +117,7 @@ public class FragmentNavigationManage implements NavigationManage {
         FragmentCombo fragmentCombo = new FragmentCombo();
         FragmentBook fragmentBook = new FragmentBook();
         FragmentPost fragmentPost = new FragmentPost();
+        FragmentBangTinh fragmentBangTinh = new FragmentBangTinh();
         Fragment currentFragment = mfragmentManager.findFragmentById(R.id.container);
 
         if(currentFragment.getTag().equals(fragmentChild.getClass().toString())){
@@ -125,6 +132,8 @@ public class FragmentNavigationManage implements NavigationManage {
             } else {
                 showFragment(FragmentBook.newInstance(lop,mon,tenSach),false);
             }
+        } else if (currentFragment.getTag().equals(fragmentBangTinh.getClass().toString())){
+            showFragment(lop);
         }
         else if(currentFragment.getTag().equals(fragmentClass.getClass().toString())){
             new AlertDialog.Builder(mainActivity)

@@ -12,24 +12,10 @@
     <string name="menu_hoc_truc_tuyen">Học trực tuyến tại Website</string>
     <string name="menu_ung_dung_online">Học online</string>
     <string name="menu_hoc_tieng_anh">Học tiếng anh</string>
-
-
-    <string name="html">
-        <![CDATA[
-        <div class="atitle" style="white-space: normal;margin:20px 0; ">
-                                <h3 style="font-size: 18px;font-weight: bold; color:#2888e1">Đồ thị</h3>
-                            </div>
-                            <div><img src="https://hocdot.com/libs/imgtools/do-thi-pt-1.svg" alt="Phương trình bậc một"></div>
-
-
-                            <div class="atitle" style="white-space: normal;margin:25px 0; ">
-                                <h3 style="font-size: 18px;font-weight: bold; color:#2888e1">Lý thuyết phương trình bậc nhất một ẩn và cách giải</h3>
-                            </div>
-                            <p style="text-align: justify;"><strong>1. Định nghĩa phương trình bậc nhất một ẩn</strong></p><p style="text-align: justify;">Phương trình có dạng \(ax+b=0\), với \(a\) và \(b\) là hai số đã cho và \(a\ne0\), được gọi là phương trình bậc nhất một ẩn.</p><p style="text-align: justify;"><strong>2. Hai quy tắc biến đổi phương trình</strong></p><p style="text-align: justify;"><strong>a) Quy tắc chuyển vế</strong></p><p style="text-align: justify;">Trong một phương trình ta có thể chuyển một hạng tử từ vế này sang vế kia và đổi dấu hạng tử đó.</p><p style="text-align: justify;"><strong>b) Quy tắc nhân với một số</strong></p><p style="text-align: justify;">Trong một phương trình, ta có thể nhân (hoặc chia) cả hai vế với cùng một số khác \(0\).</p><p style="text-align: justify;"><strong>3. Cách giải phương trình bậc nhất một ẩn</strong></p><p style="text-align: justify;"><strong>Bước 1:</strong> Chuyển vế \(ax = -b\)</p><p style="text-align: justify;"><strong>Bước 2:</strong> Chia hai vế cho \(a\) ta được: \(x =  \dfrac{-b}{a}\)</p><p style="text-align: justify;"><strong>Bước 3:</strong> Kết luận nghiệm: \(S =  \left \{ \dfrac{-b}{a} \right \}\)</p><p style="text-align: justify;"><strong>Tổng quát phương trình \(ax+b=0\) (với \(a\ne0\)) được giải như sau:</strong></p><p style="text-align: justify;">\(ax + b = 0 \Leftrightarrow  ax = -b  \Leftrightarrow  x = \dfrac{-b}{a}\)</p><p style="text-align: justify;">Vậy phương trình có một nghiệm duy nhất là \(x=   \dfrac{-b}{a} \)</p>
-                        </div>
-
-        ]]>
-    </string>
+    <string name="phuong_trinh_va_giai_phuong_trinh">Phương trình và giải phương trình</string>
+    <string name="tinh_luy_thua_va_khai_can">Tính lũy thừa và khai căn</string>
+    <string name="tinh_dien_tich_va_chu_vi">Tính diện tích và chu vi</string>
+    <string name="tinh_the_tich_va_dien_tich_hinh_khoi">Tính thể tích và diện tích hình khối</string>
 
     <!--    Lớp-->
     <string name="lop_1">Lớp 1</string>

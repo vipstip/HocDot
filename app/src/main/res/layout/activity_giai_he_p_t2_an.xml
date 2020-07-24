@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_giaiPT2An"
+    tools:context=".BangTinhTrucTuyen.giaiPT.GiaiHePT2An">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giải hệ phương trình 2 ẩn"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/nhap_a1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:hint="a1"
+            android:gravity= "center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="x + "/>
+
+        <EditText
+            android:id="@+id/nhap_b1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="b1"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="y = "/>
+
+        <EditText
+            android:id="@+id/nhap_c1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="c1"
+            android:importantForAutofill="no" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/nhap_a2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:hint="a2"
+            android:gravity= "center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="x + "/>
+
+        <EditText
+            android:id="@+id/nhap_b2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="b2"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="y = "/>
+
+        <EditText
+            android:id="@+id/nhap_c2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="LabelFor"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="c2"
+            android:importantForAutofill="no" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnGiaiHePT2An"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Tính"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Kết quả:"
+        />
+    <io.github.kexanie.library.MathView
+        android:id="@+id/txtKquaGiaiHePT2An"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+</LinearLayout>
