@@ -101,23 +101,14 @@ public class FragmentNavigationManage implements NavigationManage {
         fragmentTransaction.addToBackStack(fragment.getClass().toString());
         fragmentTransaction.commit();
     }
-    private void removeFragment(Fragment fragment, boolean b){
-        FragmentManager fragmentManager = mfragmentManager;
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().remove(fragment);
-        fragmentTransaction.addToBackStack("null");
 
-        if (b || !BuildConfig.DEBUG)
-            fragmentTransaction.commitAllowingStateLoss();
-        else fragmentTransaction.commit();
-        fragmentManager.executePendingTransactions();
-    }
     private void backFragmentPrev(){
         FragmentClass fragmentClass = FragmentClass.newInstance(lop);
-        FragmentChild fragmentChild = new FragmentChild();
-        FragmentCombo fragmentCombo = new FragmentCombo();
-        FragmentBook fragmentBook = new FragmentBook();
-        FragmentPost fragmentPost = new FragmentPost();
-        FragmentBangTinh fragmentBangTinh = new FragmentBangTinh();
+        FragmentChild fragmentChild = FragmentChild.newInstance(lop,mon);
+        FragmentCombo fragmentCombo = FragmentCombo.newInstance(lop,mon,tenCombo);
+        FragmentBook fragmentBook = FragmentBook.newInstance(lop,mon,tenSach);
+        FragmentPost fragmentPost = FragmentPost.newInstance(lop,mon,tenSach,tenChuong,tenBai);
+        FragmentBangTinh fragmentBangTinh = FragmentBangTinh.newInstance();
         Fragment currentFragment = mfragmentManager.findFragmentById(R.id.container);
 
         if(currentFragment.getTag().equals(fragmentChild.getClass().toString())){

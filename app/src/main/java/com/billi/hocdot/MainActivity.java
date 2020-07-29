@@ -4,13 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
@@ -46,36 +43,11 @@ public class MainActivity extends AppCompatActivity {
     private List<String> lstTitle;
     private Map<String,List<String>> lstChild;
     private NavigationManage navigationManage;
-    static final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 1;
-    static final int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
     ADBanner adBanner;
     FrameLayout bannerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_COARSE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            // Should we show an explanation?
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_COARSE_LOCATION) && ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION) ) {
-
-            } else {
-
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
-                        MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION);
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
-
-            }
-        }
         setContentView(R.layout.activity_main);
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
@@ -151,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void selectFirstItemAsDefault() {
         if (navigationManage != null){
-            navigationManage.showFragment("0");
+            navigationManage.showFragment("Lớp 12");
             getSupportActionBar().setTitle("Chọn Lớp");
         }
     }
@@ -212,6 +184,9 @@ public class MainActivity extends AppCompatActivity {
                 if (items[2].equals(lstTitle.get(i))){
                     navigationManage.showFragmentBangTinh();
                     mDrawerLayout.closeDrawer(GravityCompat.START);
+                } else if (items[0].equals(lstTitle.get(i))){
+                    Intent intentSearch = new Intent(MainActivity.this,ActivitySearch.class);
+                    startActivity(intentSearch);
                 }
                 return false;
             }

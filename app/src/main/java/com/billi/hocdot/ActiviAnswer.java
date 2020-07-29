@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import io.github.kexanie.library.MathView;
 
 public class ActiviAnswer extends AppCompatActivity {
@@ -37,5 +38,6 @@ public class ActiviAnswer extends AppCompatActivity {
             mathViewAnswer.getSettings().setJavaScriptEnabled(true);
             mathViewAnswer.setText("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes\">" + convertHTMLAnswer);
         }
+
     }
 }

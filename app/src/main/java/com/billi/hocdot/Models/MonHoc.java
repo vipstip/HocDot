@@ -8,7 +8,6 @@ public class MonHoc {
 
     public MonHoc(){
         tenSach = new ArrayList<>();
-
     }
 
     public List<String> getTenSach() {
@@ -19,6 +18,9 @@ public class MonHoc {
         this.tenSach.add(tenSach);
     }
 
+    public void clearSach(){
+        tenSach.clear();
+    }
     private void addFirstDropdow(){
         tenSach.add("----------Chọn môn----------");
     }

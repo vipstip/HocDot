@@ -127,9 +127,7 @@ public class FragmentClass extends Fragment {
 
             }
         });
-        if (lop.equals("0")){
-            lop = sharedPreferences.getString("lop","Lớp 12");
-        }
+        lop = sharedPreferences.getString("lop","Lớp 12");
         monHoc = new MonHoc();
 
         txtTitle = view.findViewById(R.id.title);
@@ -172,7 +170,6 @@ public class FragmentClass extends Fragment {
 
                     }
                 }
-                isConnect = true;
             }
         });
 
@@ -187,6 +184,7 @@ public class FragmentClass extends Fragment {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        monHoc.clearSach();
                         try {
                             JSONArray arraySelectMon = new JSONArray(response);
 
@@ -197,7 +195,7 @@ public class FragmentClass extends Fragment {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
+                        isConnect = true;
                         listenerMonHoc.onResponse();
                     }
                 },
