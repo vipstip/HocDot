@@ -11,6 +11,9 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.bil.bilmobileads.ADInterstitial;
+import com.bil.bilmobileads.PBMobileAds;
+import com.bil.bilmobileads.interfaces.AdDelegate;
 import com.billi.hocdot.ActiviAnswer;
 import com.billi.hocdot.Models.Questions;
 import com.billi.hocdot.R;
@@ -85,6 +88,37 @@ public class AdapterQuestions extends BaseAdapter {
             public void onClick(View view) {
                 intent.putExtra("answer",questions.getAnswer(questions.getLstTitle().get(i)));
                 intent.putExtra("title",questions.getLstTitle().get(i));
+                PBMobileAds.getInstance().initialize(view.getContext());
+                ADInterstitial adInterstitial = new ADInterstitial("1a8d82d3-49aa-41fb-acb4-353713bc1c06");
+
+                adInterstitial.preLoad();
+                adInterstitial.load();
+                adInterstitial.setListener(new AdDelegate() {
+                    @Override
+                    public void onAdLoaded(String s) {
+
+                    }
+
+                    @Override
+                    public void onAdImpression(String s) {
+
+                    }
+
+                    @Override
+                    public void onAdLeftApplication(String s) {
+
+                    }
+
+                    @Override
+                    public void onAdClosed(String s) {
+
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(String s) {
+
+                    }
+                });
                 view.getContext().startActivity(intent);
             }
         });

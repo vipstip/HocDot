@@ -28,7 +28,6 @@ public class AdapterPosts extends BaseAdapter {
     private NavigationManage navigationManage;
     private Boolean iscombo;
     private MainActivity mainActivity;
-    private ADRewarded adRewarded;
     public AdapterPosts(Context context, int layout, List<String> posts, String lop, String mon, String tensach, String tenchuong,Boolean iscombo, MainActivity mainActivity){
         this.context = context;
         this.layout = layout;
@@ -39,8 +38,6 @@ public class AdapterPosts extends BaseAdapter {
         this.tensach = tensach;
         this.tenchuong = tenchuong;
         this.mainActivity = mainActivity;
-        adRewarded = new ADRewarded(mainActivity,"055d50e0-f129-4d7d-b713-aca95d4aa32f");
-        adRewarded.preLoad();
         navigationManage = FragmentNavigationManage.getInstance(mainActivity);
     }
 
@@ -82,7 +79,6 @@ public class AdapterPosts extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 view.startAnimation(click);
-                adRewarded.load();
                 navigationManage.showFragmentPost(lop,mon,tensach,tenchuong,lstPost.get(i),iscombo);
             }
         });
